@@ -1,11 +1,122 @@
-body{
+/*body{
     font-family: 'Nunito';
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
+
+body {
+ background: #2196F3;
+ position: relative;
+ font-family: 'Roboto', sans-serif;
+ color: #fff;
+}
+
+#namer {
+ position: relative;
+ max-width: 400px;
+ margin: 10px auto 0;
+}
+
+#namer input {
+ border: 0;
+ border-bottom: 2px solid #1976D2;
+ width: 100%;
+ font-size: 30px;
+ line-height: 35px;
+ height: 70px;
+ text-align: center;
+ padding: 10px;
+ background: transparent;
+    color: #BBDEFB;
+}
+
+#namer input.shake {
+ animation-name: shaker;
+ animation-duration: 200ms;
+ animation-timing-function: ease-in-out;
+ animation-delay: 0s;
+}
+
+#namer input:focus {
+ outline: 0;
+    color: #BBDEFB;
+}
+
+#namer input::placeholder {
+ color: #1976D2;
+}
+
+#namer-input.serious input {
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ font-family: 'Andada', serif;
+ font-weight: 500;
+}
+
+#namer-input.modern input {
+ font-family: 'Raleway', sans-serif;
+ text-transform: lowercase;
+ font-weight: 300;
+ letter-spacing: 10px;
+}
+
+#namer-input.cheeky input {
+ font-family: 'Permanent Marker', cursive;
+ font-size: 40px;
+}
+
+@keyframes shaker {
+ 0% {
+  transform: translate(0px, 0px) rotate(0deg);
+  opacity: 0.8;
+ }
+ 10% {
+  transform: translate(10px, 7px) rotate(-9deg);
+  opacity: 0.6;
+ }
+ 20% {
+  transform: translate(13px, -19px) rotate(-3deg);
+  opacity: 0.3;
+ }
+ 30% {
+  transform: translate(-6px, -6px) rotate(2deg);
+  opacity: 0.4;
+ }
+ 40% {
+  transform: translate(-9px, -18px) rotate(-5deg);
+  opacity: 0.4;
+ }
+ 50% {
+  transform: translate(10px, -8px) rotate(5deg);
+  opacity: 0.7;
+ }
+ 60% {
+  transform: translate(-10px, 14px) rotate(-6deg);
+  opacity: 1;
+ }
+ 70% {
+  transform: translate(10px, 3px) rotate(6deg);
+  opacity: 0.1;
+ }
+ 80% {
+  transform: translate(-2px, 20px) rotate(-6deg);
+  opacity: 1;
+ }
+ 90% {
+  transform: translate(-7px, -19px) rotate(2deg);
+  opacity: 0.5;
+ }
 }
 
 h2{
     font-size: 18px;
     padding: 10px 20px;
     color: #575ed8;
+}
+
+#main_container {
+    padding: 20px;
 }
 
 #mario-chat{
@@ -39,12 +150,11 @@ h2{
     color: #575ed8;
 }
 
-label{
+/*label{
     box-sizing: border-box;
     display: block;
     padding: 10px 20px;
 }
-
 input{
     padding: 10px 20px;
     box-sizing: border-box;
@@ -63,8 +173,8 @@ input:invalid {
 input,
 input:valid {
     border-color: #ccc;
-}
-button{
+}*/
+/*button{
     background: #575ed8;
     color: #fff;
     font-size: 18px;
@@ -72,4 +182,24 @@ button{
     padding: 12px 0;
     width: 100%;
     border-radius: 0 0 2px 2px;
+}
+*/
+#Login-form {
+    align-content: center;
+    text-align: center;
+    margin: 40px;
+    padding: 20px;
+}
+
+#Login-form button {
+ padding: 10px 50px;
+ max-width: 800px;
+ display: inline-block;
+ margin: 5%;
+ border-radius: 30px;
+ font-size: 14px;
+ letter-spacing: 0.3px;
+ box-shadow: none;
+ background-color: #1976D2;
+ color: #fff;
 }
