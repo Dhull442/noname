@@ -1,5 +1,5 @@
 // make connection
-var socketfrontend = io.connect('http://localhost:4000');
+var socketfrontend = io.connect('https://iitd-vpn.herokuapp.com:4000');
 
 // Query handler;
 var kerberos = document.getElementById('kerberos');
