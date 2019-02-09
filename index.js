@@ -3,6 +3,9 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html');
+});
 var server = app.listen(4000, function(){
     console.log('listening for requests on port 4000,');
 });

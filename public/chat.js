@@ -10,6 +10,7 @@ var output = document.getElementById('ip');
 
 userbtn.addEventListener('click',function(){
   socketfrontend.emit('ball',{
+    // Functions of user
     kerberos: kerberos.value,
     ip : ip.value
   });
@@ -17,6 +18,7 @@ userbtn.addEventListener('click',function(){
 });
 hostbtn.addEventListener('click',function(){
   socketfrontend.emit('socket',{
+    // Functions to be done by host login
     kerberos: kerberos.value,
     ip : ip.value
   });
