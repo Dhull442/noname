@@ -3,9 +3,6 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/public/index.html');
-});
 var server = app.listen(4000, function(){
     console.log('listening for requests on port 4000,');
 });
@@ -17,7 +14,7 @@ app.use(express.static('public'));
 var io = socket(server);
 io.on('connection',(socket) => {
   console.log('maid io connect',socket.id);
-  socket.on('connector',function(data){
+  socket.on('ball',function(data){
     io.sockets.emit('connector',data);
   })
 })
