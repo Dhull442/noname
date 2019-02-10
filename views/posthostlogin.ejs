@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to the Server</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="/assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+      <p><strong>Thanks for Helping us in hosting this site.</strong>
+      You are <%= data.kerberos %> with public ip = <%= data.ipaddr %></p>
+      <form action="/logout" method="POST" id="logout">
+        <input type="submit" value="Logout"/>
+      </form>
+  </body>
+</html>

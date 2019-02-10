@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WebScockets 101</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $.getJSON("https://api.ipify.org?format=json", function (data) {
+      document.getElementById('ipaddr').value = data.ip;
+      // $('#showip').html('<p>'+data.ip+'</p>');
+    })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="/assets/style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- <section id="ipaddr"></section> -->
+  <!-- <div id="showip"></div> -->
+      <form action="/login" method="POST" id="login-form">
+           <input autocomplete="off" type="text" name="kerberos" placeholder="Type your Kerberos Id" pattern="^[a-z]{2,3}\d{7}">
+        <input name="ipaddr" type="hidden" id="ipaddr" />
+        <select name="logintype" single>
+  <option value="user">User</option>
+  <option value="host">Host</option>
+</select>
+<input type="submit" class="btn btn-primary" value="Login" />
+      </form>
+</html>

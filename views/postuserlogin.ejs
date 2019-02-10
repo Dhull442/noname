@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to the Server</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="/assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+      <p><strong>Thanks for Contacting <%= data.kerberos %> in <%= data.logintype %> department </strong></p>
+    <form action="/getdata" method="POST" id="query-form" >
+    <input name="kerberos" type="hidden" value=<%= data.kerberos %> />
+    <input name="request" type="text" placeholder="Search" value=""/><br>
+    <input type="submit"  value="submit"/>
+    </form>
+  </body>
+</html>
