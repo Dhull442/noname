@@ -2,7 +2,7 @@ var express = require('express');
 var socket = require('socket.io');
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
-
+var request = require('request');
 // App setup
 var app = express();
 app.set('view engine','ejs');
@@ -20,8 +20,9 @@ var urlencoded = bodyParser.urlencoded({ extended: false })
 app.post('/login',urlencoded,function(req,res){
   // var ip = document.getElementById('ipaddr');
   console.log(req.body);
-  if(req.body.logintype === "user")
-  {res.render('postuserlogin',{data: req.body});}
+  if(req.body.logintype === "user"){
+    res.render('postuserlogin',{data: req.body});
+  }
   else{
     res.render('posthostlogin',{data: req.body});
   }
@@ -29,9 +30,21 @@ app.post('/login',urlencoded,function(req,res){
 
 app.post('/getdata',urlencoded,function(req,res){
   console.log(req.body);
-  res.send(req.body);
-  res.end();
-})
+//   request(req.body.url, function (error, response, body) {
+//   console.log('error:', error); // Print the error if one occurred
+//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+//   // console.log('body:', body); // Print the HTML for the Google homepage.
+//   res.render(body);
+//   // res.end();
+// });
+request
+  .get(req.body.url)
+  .on('response', function(response) {
+    console.log(response.statusCode) // 200
+    console.log(response.headers['content-type']) // 'image/png'
+  })
+  .pipe(res);
+});
 app.post('/logout',function(req,res){
   // close connection method
   res.send("You can close this now :), Thanks for helping!");
