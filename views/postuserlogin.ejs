@@ -6,7 +6,7 @@
     <link href="/.assets/style.css" rel="stylesheet" />
   </head>
   <body>
-      <p><strong>You are <%= data.kerberos %>, acting as a <%= data.logintype %></strong></p>
+      <p><strong>You are <%= data.kerberos %>, acting as a <%= data.logintype %>. You have 10 credits remaining and depleteting with rate 1/s</strong></p>
     <form action="/getdata" method="POST" id="query-form" >
     <input name="kerberos" type="hidden" value="<%= data.kerberos %>" />
     <input name="url" type="text" placeholder="Search" value="<%= data.url %>" /><br>
