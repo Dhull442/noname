@@ -29,6 +29,9 @@ app.post('/login',urlencoded,function(req,res){
 })
 
 app.post('/getdata',urlencoded,function(req,res){
+  var Shell = require('shelljs')
+  Shell.exec('wget wget --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --no-parent ',
+              req.body.url + ' -o cache');
   console.log(req.body);
 //   request(req.body.url, function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred
