@@ -7,11 +7,12 @@
     <link href="/assets/style.css" rel="stylesheet" />
   </head>
   <body>
-      <p><strong>Thanks for Contacting <%= data.kerberos %> in <%= data.logintype %> department </strong></p>
+      <p><strong>You are <%= data.kerberos %>, acting as a <%= data.logintype %></strong></p>
     <form action="/getdata" method="POST" id="query-form" >
     <input name="kerberos" type="hidden" value=<%= data.kerberos %> />
-    <input name="url" type="text" placeholder="Search" value=""/><br>
+    <input name="url" type="text" placeholder="Search" value=<%= data.url %> /><br>
     <input type="submit"  value="submit"/>
     </form>
+        <iframe src="<%= data.page %>"  width="" height=""></iframe>
   </body>
 </html>
