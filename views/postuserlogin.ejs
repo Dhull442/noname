@@ -3,16 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome to the Server</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-    <link href="/assets/style.css" rel="stylesheet" />
+    <link href="/.assets/style.css" rel="stylesheet" />
   </head>
   <body>
       <p><strong>You are <%= data.kerberos %>, acting as a <%= data.logintype %></strong></p>
     <form action="/getdata" method="POST" id="query-form" >
-    <input name="kerberos" type="hidden" value=<%= data.kerberos %> />
-    <input name="url" type="text" placeholder="Search" value=<%= data.url %> /><br>
+    <input name="kerberos" type="hidden" value="<%= data.kerberos %>" />
+    <input name="url" type="text" placeholder="Search" value="<%= data.url %>" /><br>
     <input type="submit"  value="submit"/>
     </form>
-        <iframe src="<%= data.page %>"  width="" height=""></iframe>
+        <!-- <iframe src="<%= data.page %>"  width="" height=""></iframe> -->
   </body>
 </html>
